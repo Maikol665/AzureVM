@@ -6,7 +6,7 @@
       "value": "westus2"
     },
     "networkInterfaceName": {
-      "value": "machine04642"
+      "value": "machine0487"
     },
     "enableAcceleratedNetworking": {
       "value": true
@@ -17,16 +17,48 @@
     "networkSecurityGroupRules": {
       "value": [
         {
-          "name": "SSH",
+          "name": "https",
           "properties": {
-            "priority": 300,
+            "priority": 1010,
             "protocol": "TCP",
             "access": "Allow",
             "direction": "Inbound",
+            "sourceApplicationSecurityGroups": [],
+            "destinationApplicationSecurityGroups": [],
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "443"
+          }
+        },
+        {
+          "name": "ssh",
+          "properties": {
+            "priority": 1020,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceApplicationSecurityGroups": [],
+            "destinationApplicationSecurityGroups": [],
             "sourceAddressPrefix": "*",
             "sourcePortRange": "*",
             "destinationAddressPrefix": "*",
             "destinationPortRange": "22"
+          }
+        },
+        {
+          "name": "http",
+          "properties": {
+            "priority": 1030,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceApplicationSecurityGroups": [],
+            "destinationApplicationSecurityGroups": [],
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "80"
           }
         }
       ]
@@ -35,7 +67,7 @@
       "value": "default"
     },
     "virtualNetworkName": {
-      "value": "Machine04-vnet"
+      "value": "Machine04_group-vnet"
     },
     "addressPrefixes": {
       "value": [
@@ -68,7 +100,7 @@
       "value": "Machine04"
     },
     "virtualMachineRG": {
-      "value": "Machine04"
+      "value": "Machine04_group"
     },
     "osDiskType": {
       "value": "Premium_LRS"
