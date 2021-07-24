@@ -4,7 +4,7 @@
     "parameters": {
         "Region": {
             "type": "string",
-            "defaultValue": "West US",   
+            "defaultValue": "West US"   
         },    
         "location": {
             "type": "string"
