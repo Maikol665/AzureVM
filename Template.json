@@ -150,9 +150,9 @@
                         }
                     },
                     "imageReference": {
-                        "publisher": "canonical",
-                        "offer": "0001-com-ubuntu-server-focal",
-                        "sku": "20_04-lts",
+                        "publisher": "cognosys",
+                        "offer": "centos-7",
+                        "sku": "centos-7",
                         "version": "latest"
                     }
                 },
@@ -178,6 +178,11 @@
                         "enabled": true
                     }
                 }
+            },
+            "plan": {
+                "name": "centos-7",
+                "publisher": "cognosys",
+                "product": "centos-7"
             }
         }
     ],
