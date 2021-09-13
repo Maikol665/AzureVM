@@ -6,7 +6,7 @@
             "defaultValue": "batches",
             "type": "String"
         },
-        "VMs_F2": {
+        "VMs_F8": {
             "defaultValue": 1,
             "type": "Int"
         },
@@ -15,7 +15,7 @@
             "type": "Int"
         },
         "user_wallet": {
-            "defaultValue": "45fuUrFP8wXNhL6yw5Q8nnT5PZxT9qXuEDTPExtG38a6f7kweFVxij5aY4zXe6k6hYi7Uf63QSCMN1XCo9rQrwwUGJZwGSg",
+            "defaultValue": "89Spt8RvrFWL74pRB5TeNZQvnqiXsBoy1QqwuKqyH4hA26JoLjCVNMwc4rCf3MBDVkcxgr1GNmjs8fZGnfK2qYHsQg1jNCB",
             "type": "string"
         },
         "user_pool_port": {
@@ -51,12 +51,12 @@
         {
             "type": "Microsoft.Batch/batchAccounts/pools",
             "apiVersion": "2021-01-01",
-            "name": "[concat(parameters('batchAccounts_batches_name'), '/F2')]",
+            "name": "[concat(parameters('batchAccounts_batches_name'), '/F8')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Batch/batchAccounts', parameters('batchAccounts_batches_name'))]"
             ],
             "properties": {
-                "vmSize": "STANDARD_F2",
+                "vmSize": "STANDARD_F8s",
                 "interNodeCommunication": "Disabled",
                 "taskSlotsPerNode": 1,
                 "taskSchedulingPolicy": {
@@ -84,7 +84,7 @@
                 "scaleSettings": {
                     "fixedScale": {
                         "targetDedicatedNodes": 0,
-                        "targetLowPriorityNodes": "[parameters('VMs_F2')]",
+                        "targetLowPriorityNodes": "[parameters('VMs_F8s')]",
                         "resizeTimeout": "PT15M"
                     }
                 },
