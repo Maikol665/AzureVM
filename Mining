@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "batchAccounts_batches_name": {
-            "defaultValue": "batches",
+            "defaultValue": "batchesname",
             "type": "String"
         },
         "VMs_F2": {
@@ -11,7 +11,7 @@
             "type": "Int"
         },
         "VMs_F4": {
-            "defaultValue": 1,
+            "defaultValue": 2,
             "type": "Int"
         },
         "user_wallet": {
