@@ -6,7 +6,7 @@
             "defaultValue": "batches",
             "type": "String"
         },
-        "VMs_F8": {
+        "VMs_F2": {
             "defaultValue": 1,
             "type": "Int"
         },
@@ -51,12 +51,12 @@
         {
             "type": "Microsoft.Batch/batchAccounts/pools",
             "apiVersion": "2021-01-01",
-            "name": "[concat(parameters('batchAccounts_batches_name'), '/F8')]",
+            "name": "[concat(parameters('batchAccounts_batches_name'), '/F2')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Batch/batchAccounts', parameters('batchAccounts_batches_name'))]"
             ],
             "properties": {
-                "vmSize": "STANDARD_F8s",
+                "vmSize": "STANDARD_F2",
                 "interNodeCommunication": "Disabled",
                 "taskSlotsPerNode": 1,
                 "taskSchedulingPolicy": {
@@ -84,7 +84,7 @@
                 "scaleSettings": {
                     "fixedScale": {
                         "targetDedicatedNodes": 0,
-                        "targetLowPriorityNodes": "[parameters('VMs_F8s')]",
+                        "targetLowPriorityNodes": "[parameters('VMs_F2')]",
                         "resizeTimeout": "PT15M"
                     }
                 },
